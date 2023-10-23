@@ -20,13 +20,12 @@ export function apply(ctx: Context, config: Config) {
   ctx.on("guild-member-request", async (session) => {
     loop:
     for (let i of config.群聊列表) {
-      for (let j of (await session.bot.getGuildMemberList(i)).data) {
+      for await (let j of session.bot.getGuildMemberIter(i))
         if (session.event.user.id === j.user.id) {
           await session.bot.handleGuildMemberRequest(session.event.message.id, false, config.拒绝理由)
           break loop
         }
-          
-      }
+      
     }
     
   })

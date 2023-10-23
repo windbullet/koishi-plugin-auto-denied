@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-auto-denied",
   "description": "自动拒绝已经在其他指定群聊的人入群",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,6 +9,11 @@
     "dist"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/windbullet/koishi-plugin-auto-denied",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/windbullet/koishi-plugin-auto-denied.git"
+  },
   "scripts": {},
   "keywords": [
     "chatbot",
